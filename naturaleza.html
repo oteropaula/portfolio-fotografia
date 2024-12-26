@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturaleza</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lulo+Clean+One:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="imagenes/logocolor.png" type="image/png">
+</head>
+<body class="other-page">
+    <!-- Header Menu -->
+    <header class="header">
+        <nav>
+            <ul class="nav-menu">
+                <!-- Logo que redirige a la página principal -->
+                <li class="logo"><a href="index.html"><img src="imagenes/logo.png" alt="Logo" /></a></li>
+                <!-- Menú de categorías -->
+                <li><a href="retratos.html">retrato</a></li>
+                <li><a href="naturaleza.html" class="active">naturaleza</a></li>
+                <li><a href="urbano.html">urbano</a></li>
+                <li><a href="animales.html">animales</a></li>
+                <li><a href="deporte.html">deporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Portfolio Section con imágenes cuadradas (4 por fila) -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image1.jpg" alt="Naturaleza 1" onclick="openModal(1)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image2.jpg" alt="Naturaleza 2" onclick="openModal(2)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image3.jpg" alt="Naturaleza 3" onclick="openModal(3)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image4.jpg" alt="Naturaleza 4" onclick="openModal(4)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image5.jpg" alt="Naturaleza 5" onclick="openModal(5)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image6.jpg" alt="Naturaleza 6" onclick="openModal(6)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image7.jpg" alt="Naturaleza 7" onclick="openModal(7)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image8.jpg" alt="Naturaleza 8" onclick="openModal(8)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image9.jpg" alt="Naturaleza 9" onclick="openModal(9)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image10.jpg" alt="Naturaleza 10" onclick="openModal(10)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image11.jpg" alt="Naturaleza 11" onclick="openModal(11)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image12.jpg" alt="Naturaleza 12" onclick="openModal(12)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image13.jpg" alt="Naturaleza 13" onclick="openModal(13)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image14.jpg" alt="Naturaleza 14" onclick="openModal(14)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/naturaleza/image15.jpg" alt="Naturaleza 15" onclick="openModal(15)">
+        </div>
+
+    </section>
+    
+
+    <!-- Modal de visualización de imágenes -->
+    <div id="imageModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">×</span>
+            <img id="modalImage" src="imagenes/naturaleza/image1.jpg" alt="Imagen Modal">
+            <div class="navigation">
+                <button class="arrow-left" onclick="changeImage(-1)">&#10094;</button>
+                <button class="arrow-right" onclick="changeImage(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <p>
+                <a href="mailto:oteropaula2002@gmail.com"><i class="fas fa-envelope"></i></a>
+            </p>
+            <div class="social-icons">
+                <!--<a href="https://www.instagram.com/pauframes/" target="_blank"><i class="fab fa-instagram"></i></a>-->
+                <a href="https://instagram.com/cinemaflicker/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Paula Otero Paños. Todos los derechos reservados.</p>
+    </div>
+
+    <script src="javascript.js"></script>
+</footer>
+</body>
+</html>

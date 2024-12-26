@@ -1,0 +1,319 @@
+/* ========================
+   Estilos Generales
+   ======================== */
+   body {
+    margin: 0;
+    font-family: 'EB Garamond', serif;
+    background-color: #fff;
+}
+
+/* ========================
+   Header
+   ======================== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #fff;
+}
+
+
+/* ========================
+   Menú de Navegación
+   ======================== */
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-menu li {
+    display: inline-block;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;  
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ddd;
+}
+
+/* Estilo para el elemento activo */
+nav ul li a.active {
+    color: #c9c8c8; /* color destacado */
+    font-weight: bold; 
+  }
+
+
+/* ========================
+   Estilos específicos para other-page
+   ======================== */
+
+
+body.other-page .header {
+    background-color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+body.index-page .header {
+    background-color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* ========================
+   Logo
+   ======================== */
+   .logo a img {
+    width: 50px;
+    height: auto;
+    transform: scale(2); /* doble de su tamaño */
+    transform-origin: center;
+}
+
+
+
+/* ========================
+   Hero Section
+   ======================== */
+   .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('imagenes/fondo-hero.jpg');
+    background-size: cover;
+    text-align: center;
+    color: white;
+    margin-top: 110px; 
+}
+
+
+.hero h1 {
+    font-family: 'Lulo Clean One', sans-serif; /* Fuente Lulo Clean One Bold */
+    font-size: 20px; 
+}
+
+/* ========================
+   Portfolio Section
+   ======================== */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 30px;
+    margin-top: 100px;  
+}
+
+.portfolio-item {
+    position: relative;  /* Para que las imágenes dentro se ajusten correctamente */
+    aspect-ratio: 1;  
+    overflow: hidden;  /* Para asegurar que no se salga nada del contenedor */
+}
+
+.portfolio-item img {
+    width: 100%;  /* 100% del contenedor */
+    height: 100%;  
+    object-fit: cover;  /* asegura que la imagen se recorte para que se ajuste al contenedor cuadrado */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* sombra para destacar la imagen */
+}
+
+
+/* ========================
+   Modal de visualización de imágenes
+   ======================== */
+/* Estilo para el modal (fondo blanco, ocupa toda la pantalla) */
+.modal {
+    display: none;  /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contenido del modal (imagen centrada) */
+.modal-content {
+    position: relative;
+    width: 100%;               
+    height: 100%;              
+    background-color: rgba(255, 255, 255); 
+    border-radius: 10px;
+    display: flex;
+    justify-content: center; /* Centrar la imagen horizontalmente */
+    align-items: center;     /* Centrar la imagen verticalmente */
+    padding: 10px;
+    overflow: hidden;        /* Esconde cualquier cosa que sobresalga del contenedor */
+}
+
+/* Imagen dentro del modal */
+#modalImage {
+    width: 100%;              /* La imagen ocupa todo el ancho disponible */
+    height: 100%;             /* La imagen ocupa toda la altura disponible */
+    object-fit: contain;      /* Asegura que la imagen se ajusta dentro del contenedor sin deformarse */
+    max-width: 100%;          /* Asegura que la imagen no sea más ancha que el contenedor */
+    max-height: 100%;         /* Asegura que la imagen no sea más alta que el contenedor */
+    display: block;
+}
+
+
+/* Estilo para las flechas de navegación (con opacidad) */
+.navigation button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con algo de transparencia */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    opacity: 0.6; /* Flechas con opacidad */
+
+}
+
+/* Flechas izquierda y derecha */
+.arrow-left {
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.arrow-right {
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+/* Efecto al pasar el cursor sobre las flechas */
+.navigation button:hover {
+    opacity: 1; /* Mayor visibilidad al pasar el cursor */
+}
+
+/* Estilo para la cruz para cerrar el modal */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.8); /* Color negro con algo de opacidad */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6; /* Opacidad por defecto */
+    transition: opacity 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre la cruz */
+.close-modal:hover {
+    opacity: 1; /* Mayor visibilidad */
+    transform: scale(1.1); /* Aumento de tamaño */
+}
+
+/* ========================
+   Footer
+   ======================== */
+.footer {
+    background-color: transparent; /* Fondo transparente */
+    color: #ccc; /* Color gris claro para el texto */
+    padding: 15px 0; /* Menos espacio para que se vea más compacto */
+    text-align: center; 
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+}
+
+.footer-content {
+    display: flex; /* Diseño en fila */
+    justify-content: center; /* Centra las secciones horizontalmente */
+    gap: 40px; /* Espaciado constante entre las secciones */
+    width: 100%; /* Asegura que el contenido ocupe todo el ancho disponible */
+    max-width: 1000px; /* Limita el tamaño máximo */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+.footer-section {
+    text-align: center; /* Centra todo el contenido */
+
+
+    /*LO SIGUIENTE ES NUEVO PARA PONERLOS EN UNA FILA LOS 2 ICONS*/
+    display: flex; /* Hace que los elementos dentro de la sección estén en fila */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    gap: 10px; /* Espacio entre los elementos */
+}
+
+.footer-section a i {
+    margin-right: 8px; /* Espaciado entre el icono y el texto */
+    font-size: 1.2em; /* Aumenta el tamaño del icono */
+    vertical-align: middle; /* Alinea el icono con el texto */
+    color: #555; /* Color gris oscuro por defecto */
+}
+
+.footer-section a {
+    color: #ccc; /* Enlaces más suaves */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 0.85em; /* Tamaño de fuente más pequeño */
+    margin-bottom: 10px; /* Espaciado entre los enlaces */
+    /*display: block; /* Para que cada enlace ocupe su propia línea */
+
+    /*LO SIGUIENTE ES NUEVO PARA PONERLOS EN UNA FILA LOS 2 ICONS*/
+    display: inline-flex; /* Hace que los enlaces estén en línea, no apilados */
+    align-items: center; /* Alinea icono y texto verticalmente */
+}
+
+.social-icons a {
+    line-height: 1.2; /* Interlineado más estrecho */
+}
+
+.footer-section p {
+    font-size: 0.85em; /* Tamaño de fuente igual para los tres textos */
+    color: #bbb; /* Color gris más suave */
+    margin-bottom: 8px; /* Menos espacio entre los correos y los links de redes sociales */
+}
+
+.social-icons a i {
+    color: #555; /* Iconos en gris oscuro */
+}
+
+.footer-section a:hover,
+.footer-section a:hover i {
+    color: #f4c542; /* Color de texto y icono cuando se pasa el ratón (amarillo) */
+}
+
+.social-icons a:hover {
+    color: #f4c542; /* Color del texto en Instagram al pasar el ratón */
+}
+
+.social-icons a:hover i {
+    color: #f4c542; /* Color del icono en Instagram al pasar el ratón */
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Espaciado superior */
+    font-size: 0.8em; /* Tamaño de texto pequeño */
+    color: #aaa; /* Color gris claro */
+    border-top: 1px solid #444; /* Línea superior sutil */
+    padding-top: 10px; /* Espaciado superior dentro del footer */
+}
+

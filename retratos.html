@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Retrato</title>
+        <link rel="stylesheet" href="estilos.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lulo+Clean+One:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" href="imagenes/logocolor.png" type="image/png">
+    </head>
+    
+<body class="other-page">
+    <!-- Header Menu -->
+    <header class="header">
+        <nav>
+            <ul class="nav-menu">
+                <!-- Logo que redirige a la página principal -->
+                <li class="logo"><a href="index.html"><img src="imagenes/logo.png" alt="Logo" /></a></li>
+                <!-- Menú de categorías -->
+                <li><a href="retratos.html" class="active">retrato</a></li>
+                <li><a href="naturaleza.html">naturaleza</a></li>
+                <li><a href="urbano.html">urbano</a></li>
+                <li><a href="animales.html">animales</a></li>
+                <li><a href="deporte.html">deporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Portfolio Section con imágenes cuadradas (4 por fila) -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image1.jpg" alt="Retrato 1" onclick="openModal(1)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image2.jpg" alt="Retrato 2" onclick="openModal(2)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image3.jpg" alt="Retrato 3" onclick="openModal(3)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image4.jpg" alt="Retrato 4" onclick="openModal(4)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image5.jpg" alt="Retrato 5" onclick="openModal(5)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image6.jpg" alt="Retrato 6" onclick="openModal(6)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image7.jpg" alt="Retrato 7" onclick="openModal(7)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image8.jpg" alt="Retrato 8" onclick="openModal(8)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image9.jpg" alt="Retrato 9" onclick="openModal(9)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image10.jpg" alt="Retrato 10" onclick="openModal(10)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image11.jpg" alt="Retrato 11" onclick="openModal(11)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image12.jpg" alt="Retrato 12" onclick="openModal(12)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image13.jpg" alt="Retrato 13" onclick="openModal(13)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image14.jpg" alt="Retrato 14" onclick="openModal(14)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image15.jpg" alt="Retrato 15" onclick="openModal(15)">
+        </div>
+        <div class="portfolio-item">
+            <img src="imagenes/retratos/image16.jpg" alt="Retrato 16" onclick="openModal(16)">
+        </div>
+    </section>
+
+    <!-- Modal de visualización de imágenes -->
+    <div id="imageModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">×</span>
+            <img id="modalImage" src="imagenes/retratos/image1.jpg" alt="Imagen Modal">
+            <div class="navigation">
+                <button class="arrow-left" onclick="changeImage(-1)">&#10094;</button>
+                <button class="arrow-right" onclick="changeImage(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>
+                    <a href="mailto:oteropaula2002@gmail.com"><i class="fas fa-envelope"></i></a>
+                </p>
+                <div class="social-icons">
+                    <!--<a href="https://www.instagram.com/pauframes/" target="_blank"><i class="fab fa-instagram"></i></a>-->
+                    <a href="https://instagram.com/cinemaflicker/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Paula Otero Paños. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
